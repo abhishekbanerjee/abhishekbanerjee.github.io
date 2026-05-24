@@ -1,1 +1,209 @@
-Hello World
+---
+layout: default
+title: Abhishek Banerjee
+---
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20 md:py-32 rounded-lg shadow-xl m-4">
+        <div class="container mx-auto px-4">
+            {% assign hero_page = site.pages | where: "ref", "hero-content" | first %}
+            {% if hero_page %}
+                <div class="prose max-w-none mx-auto text-white">
+                    {{ hero_page.content }}
+                </div>
+            {% else %}
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Hello, I'm {{ site.author }}</h1>
+            {% endif %}
+            <div class="flex flex-wrap justify-center gap-4 mt-8">
+                <a href="#about" class="inline-block bg-white text-blue-700 px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-50 transition duration-300 shadow">About Me</a>
+                <a href="#publications" class="inline-block bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-white hover:text-blue-700 transition duration-300">Publications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white rounded-lg shadow-md m-4">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="{{ site.baseurl }}/assets/abhishek.jpg" alt="Abhishek Banerjee" class="rounded-full shadow-lg w-48 h-48 object-cover border-4 border-blue-100">
+                </div>
+                <div class="md:w-2/3 text-lg leading-relaxed prose max-w-none">
+                    {% assign about_page = site.pages | where: "ref", "about-content" | first %}
+                    {% if about_page %}
+                        {{ about_page.content }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-gray-50 rounded-lg shadow-md m-4">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Experience</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm" style="background:#E8F0FE;color:#4285F4">G</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Software Engineer — Tech Lead, Chat Experience</h3>
+                        <p class="font-medium"><a href="https://about.google/" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Google</a></p>
+                        <p class="text-sm text-gray-500 mb-2">Jan 2025 – Present · Sunnyvale, CA</p>
+                        <p class="text-gray-700">Tech lead on the Chat Experience team.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm" style="background:#F5F5F7;color:#1D1D1F">A</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Software Engineer, Contacts Frameworks</h3>
+                        <p class="font-medium"><a href="https://www.apple.com/" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Apple</a></p>
+                        <p class="text-sm text-gray-500 mb-2">Jun 2023 – Jan 2025 · Cupertino, CA</p>
+                        <p class="text-gray-700">Contacts frameworks engineer — helping the OS and your favourite apps access contacts in a fast, reliable, and safe way, and keeping them in sync across your devices.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm" style="background:#FEE5DF;color:#FF3621">D</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Software Engineer, Access Management</h3>
+                        <p class="font-medium"><a href="https://www.databricks.com/" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Databricks</a></p>
+                        <p class="text-sm text-gray-500 mb-2">Oct 2021 – May 2023 · San Francisco, CA</p>
+                        <p class="text-gray-700">Engineer on the Access Management framework — improving scalability and reliability while delivering new security features.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm" style="background:#E8F0FE;color:#4285F4">G</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Software Engineer (multiple roles)</h3>
+                        <p class="font-medium"><a href="https://about.google/" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Google</a></p>
+                        <p class="text-sm text-gray-500 mb-2">Aug 2015 – Sep 2021 · Mountain View, CA</p>
+                        <ul class="text-gray-700 list-disc list-inside space-y-1 mt-1">
+                            <li>Tech Lead, Shopping Search Features — helping you find the products you were looking for</li>
+                            <li>Tech Lead, Google Shopping List — "Hey Google, add bananas to my shopping list!"</li>
+                            <li>Engineer, Google Express — getting you what you need, same day</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm" style="background:#E3F2FD;color:#0078D4">M</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Research Intern</h3>
+                        <p class="font-medium"><a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Microsoft Research</a></p>
+                        <p class="text-sm text-gray-500 mb-2">Sep 2012 – Dec 2012 · Bengaluru, India</p>
+                        <p class="text-gray-700">Research on multi-party protocols for cryptographic applications.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-white rounded-lg shadow-md m-4">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xs" style="background:#F5F0DA;color:#8D7136">GT</div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Ph.D., Algorithms, Combinatorics and Optimization</h3>
+                            <p class="font-medium"><a href="http://www.gatech.edu/" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Georgia Institute of Technology</a></p>
+                            <p class="text-sm text-gray-500">2010 – 2015</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-xs" style="background:#E5EBF5;color:#003087">IIT</div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">B.Tech., Computer Science and Engineering</h3>
+                            <p class="font-medium"><a href="http://www.cse.iitd.ernet.in/" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Indian Institute of Technology, Delhi</a></p>
+                            <p class="text-sm text-gray-500">2006 – 2010</p>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="bg-white rounded-lg shadow-md m-4">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Publications</h2>
+            <div class="prose max-w-none mx-auto text-lg leading-relaxed">
+                {% include publications-content.html %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-50 rounded-lg shadow-md m-4">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <a href="https://github.com/abhishekbanerjee/project-euler" target="_blank" rel="noopener"
+                   class="block bg-white rounded-lg shadow p-6 hover:shadow-md transition duration-300 group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.838 1.237 1.838 1.237 1.07 1.833 2.807 1.304 3.492.996.109-.775.419-1.304.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.237-3.22-.124-.3-.535-1.52.117-3.175 0 0 1-.32 3.3.093 1.14-.317 2.35-.475 3.56-.481 1.21.006 2.42.164 3.56.481 2.3-1.413 3.3-.093 3.3-.093.652 1.655.241 2.875.118 3.175.772.84 1.237 1.91 1.237 3.22 0 4.61-2.802 5.625-5.474 5.922.43.37.823 1.102.823 2.222v3.293c0 .319.213.693.823.577C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition duration-300">project-euler</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">102 Project Euler problems solved in Rust, one commit at a time. An ongoing workout in number theory, combinatorics, and algorithm design.</p>
+                    <span class="inline-block mt-4 text-xs font-medium text-orange-600 bg-orange-50 px-2 py-1 rounded">Rust</span>
+                </a>
+
+                <a href="https://github.com/abhishekbanerjee/adventofcode" target="_blank" rel="noopener"
+                   class="block bg-white rounded-lg shadow p-6 hover:shadow-md transition duration-300 group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.838 1.237 1.838 1.237 1.07 1.833 2.807 1.304 3.492.996.109-.775.419-1.304.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.237-3.22-.124-.3-.535-1.52.117-3.175 0 0 1-.32 3.3.093 1.14-.317 2.35-.475 3.56-.481 1.21.006 2.42.164 3.56.481 2.3-1.413 3.3-.093 3.3-.093.652 1.655.241 2.875.118 3.175.772.84 1.237 1.91 1.237 3.22 0 4.61-2.802 5.625-5.474 5.922.43.37.823 1.102.823 2.222v3.293c0 .319.213.693.823.577C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"/>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition duration-300">adventofcode</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">Solutions to Advent of Code puzzles in Kotlin. A seasonal excuse to keep algorithmic thinking sharp and explore a new language.</p>
+                    <span class="inline-block mt-4 text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded">Kotlin</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white rounded-lg shadow-md m-4">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+            <p class="text-lg mb-8 max-w-xl mx-auto text-gray-600">
+                Feel free to reach out by email or connect on LinkedIn.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Email assembled in JS to avoid bot harvesting -->
+                <a id="email-link" href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-700 transition duration-300 shadow">
+                    Email Me
+                </a>
+                {% if site.linkedin_username %}
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="flex items-center gap-2 border border-blue-600 text-blue-700 px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-50 transition duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                {% endif %}
+                {% if site.github_username %}
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="flex items-center gap-2 border border-gray-400 text-gray-700 px-6 py-3 rounded-full text-base font-semibold hover:bg-gray-50 transition duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.838 1.237 1.838 1.237 1.07 1.833 2.807 1.304 3.492.996.109-.775.419-1.304.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.237-3.22-.124-.3-.535-1.52.117-3.175 0 0 1-.32 3.3.093 1.14-.317 2.35-.475 3.56-.481 1.21.006 2.42.164 3.56.481 2.3-1.413 3.3-.093 3.3-.093.652 1.655.241 2.875.118 3.175.772.84 1.237 1.91 1.237 3.22 0 4.61-2.802 5.625-5.474 5.922.43.37.823 1.102.823 2.222v3.293c0 .319.213.693.823.577C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"/>
+                    </svg>
+                    GitHub
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </section>

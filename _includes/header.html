@@ -1,0 +1,32 @@
+<!-- _includes/header.html -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="{{ site.baseurl }}/" class="flex flex-col leading-tight">
+            <span class="text-2xl font-bold text-gray-900">{{ site.author }}</span>
+            <span class="text-sm text-gray-500 font-normal">Software Engineer &amp; Researcher</span>
+        </a>
+        <div class="hidden md:flex space-x-6">
+            <a href="{{ site.baseurl }}/#about" class="text-gray-600 hover:text-blue-500 transition duration-300">About</a>
+            <a href="{{ site.baseurl }}/#experience" class="text-gray-600 hover:text-blue-500 transition duration-300">Experience</a>
+            <a href="{{ site.baseurl }}/#education" class="text-gray-600 hover:text-blue-500 transition duration-300">Education</a>
+            <a href="{{ site.baseurl }}/#publications" class="text-gray-600 hover:text-blue-500 transition duration-300">Publications</a>
+            <a href="{{ site.baseurl }}/#projects" class="text-gray-600 hover:text-blue-500 transition duration-300">Projects</a>
+            <a href="{{ site.baseurl }}/#contact" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+        <a href="{{ site.baseurl }}/#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition duration-300">About</a>
+        <a href="{{ site.baseurl }}/#experience" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition duration-300">Experience</a>
+        <a href="{{ site.baseurl }}/#education" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition duration-300">Education</a>
+        <a href="{{ site.baseurl }}/#publications" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition duration-300">Publications</a>
+        <a href="{{ site.baseurl }}/#projects" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition duration-300">Projects</a>
+        <a href="{{ site.baseurl }}/#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition duration-300">Contact</a>
+    </div>
+</header>

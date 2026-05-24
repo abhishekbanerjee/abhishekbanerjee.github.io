@@ -1,0 +1,32 @@
+# _config.yml
+
+# Site settings
+title: Abhishek Banerjee
+email: abhishekbanerjee.iitd@gmail.com
+description: >-
+  Software engineer and researcher. Background in cryptography and theoretical CS.
+baseurl: ""
+url: "https://abhishekbanerjee.github.io"
+
+# Author settings
+author: Abhishek Banerjee
+github_username: abhishekbanerjee
+linkedin_username: abhishekbanerjee11235
+google_scholar_id: ggjUt3QAAAAJ
+
+# Build settings
+markdown: CommonMark
+commonmark:
+  options: ["UNSAFE"]
+  extensions: ["table", "strikethrough", "autolink"]
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-commonmark
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

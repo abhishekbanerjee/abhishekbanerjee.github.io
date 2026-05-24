@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<!-- _layouts/page.html -->
+<section class="bg-white rounded-lg shadow-md m-4 py-8">
+    <div class="container mx-auto px-4">
+        <article class="prose max-w-none lg:prose-lg mx-auto">
+            {# The title is often handled by the section in index.html, but including it here for flexibility #}
+            {% if page.title and page.ref != "hero-content" %}
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">{{ page.title }}</h1>
+            {% endif %}
+            {{ content | markdownify }} {# Added markdownify filter here #}
+        </article>
+    </div>
+</section>
