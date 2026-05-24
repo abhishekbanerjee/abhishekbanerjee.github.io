@@ -3,24 +3,6 @@ layout: default
 title: Abhishek Banerjee
 ---
 
-    <!-- Hero Section -->
-    <section id="hero" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-20 md:py-32 rounded-lg shadow-xl m-4">
-        <div class="container mx-auto px-4">
-            {% assign hero_page = site.pages | where: "ref", "hero-content" | first %}
-            {% if hero_page %}
-                <div class="prose max-w-none mx-auto text-white">
-                    {{ hero_page.content }}
-                </div>
-            {% else %}
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Hello, I'm {{ site.author }}</h1>
-            {% endif %}
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <a href="#about" class="inline-block bg-white text-blue-700 px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-50 transition duration-300 shadow">About Me</a>
-                <a href="#publications" class="inline-block bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-white hover:text-blue-700 transition duration-300">Publications</a>
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
     <section id="about" class="bg-white rounded-lg shadow-md m-4">
         <div class="container mx-auto px-4">

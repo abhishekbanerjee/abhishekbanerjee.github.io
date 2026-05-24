@@ -4,7 +4,7 @@ title: About Me
 ref: about-content
 ---
 
-Hi, I'm **Abhishek Banerjee**. I'm a software engineer with a background in theoretical computer science. I specialize in backend development and building complex distributed systems that scale to millions of users.
+Hi, I'm **Abhishek Banerjee**. I build systems that scale and think carefully about the problems worth solving. I specialize in backend development and have spent my career working on complex distributed systems that serve millions of users.
 
 Before industry, I did a Ph.D. at Georgia Tech's School of Computer Science (in the [Algorithms, Combinatorics and Optimization](https://aco.gatech.edu/) program), where I worked on lattice-based cryptography and pseudorandom functions with [Prof. Chris Peikert](https://web.eecs.umich.edu/~cpeikert/). Before that, I studied computer science at IIT Delhi.
 
